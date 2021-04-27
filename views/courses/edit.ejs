@@ -1,0 +1,13 @@
+<div class="form-data">
+    <form action="/courses/${course._id}/update?_method=PUT" method="POST">
+        <label for = "txtTitle">
+            Title
+        </label>
+        <input type="text" name = "title" id = "txtTitle" autofocus required value="<%= course.title%>">
+        <label for = "txtDesc">
+            Description
+        </label>
+        <input type="text" name = "desc" id = "txtDesc" autofocus required value="<%= course.description%>">
+        <button type="submit">Save</button>
+    </form>
+</div>
