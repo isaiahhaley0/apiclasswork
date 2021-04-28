@@ -4,10 +4,10 @@ const User = require("../models/user"),
 
     getUserParams = body =>{
         return{
-            name:{
-                first: body.first,
-                last: body.last
-            },
+
+                firstName: body.firstName,
+                lastName: body.lastName,
+
             email: body.email,
             password: body.password,
             zipCode: body.zipCode
@@ -48,7 +48,7 @@ module.exports = {
             }
             else{
                 req.flash("error", `Failed to create user account ${error.message}`);
-                res.locals.redirect="/useers/new";
+                res.locals.redirect="/users/new";
                 next();
             }
             });

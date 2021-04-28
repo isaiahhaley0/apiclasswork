@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding-top: 150px;
+  padding-top: 130px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #625a56;
 }
@@ -53,6 +53,7 @@ a {
   cursor: pointer;
   display: inline-block;
   color: #fff;
+  margin-bottom: 2px;
 }
 
 .button:hover {
@@ -143,4 +144,87 @@ button[type=submit] {
   padding: 0 8px;
   border-radius: 10px;
   background: #fff;
+}
+
+@media (max-width: 760px) {
+  .login {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2vw;
+  }
+}
+
+#modal-button {
+  background-color: #ffe7a2;
+  color: #625956;
+  border: 1px solid;
+}
+
+.modal-dialog {
+  background: white;
+  border-radius: 15px;
+}
+
+.modal-title {
+  padding-top: 30px;
+  padding-top: 30px;
+  font-size: 30px;
+  font-family: "Baloo Bhaina";
+  color: #625956;
+  font-weight: 100;
+}
+
+.course-title {
+  font-family: "Baloo Bhaina";
+  padding: 0 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  float: left;
+}
+
+.course-description {
+  padding: 10px 10px 20px 10px;
+  text-align: left;
+  margin: 0 10px;
+  clear: left;
+}
+
+.course-title::before {
+  background-image: url("../images/fruit.jpg");
+  background-size: 20px 40px;
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  content: "";
+}
+
+.course-cost {
+  display: inline-block;
+  position: absolute;
+  right: 35px;
+  margin-top: 60px;
+  font-family: "Baloo Bhaina";
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 15px 30px;
+}
+
+.join-button {
+  position: absolute;
+  right: 35px;
+  margin-top: 30px;
+  border: 1px solid;
+}
+
+.joined-button {
+  position: absolute;
+  right: 35px;
+  margin-top: 30px;
+  background-color: #c1ffc1;
+  color: #625956;
+  border: 1px solid;
 }

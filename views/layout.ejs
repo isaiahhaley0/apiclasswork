@@ -2,8 +2,11 @@
 <html>
     <head>
         <title>Confetti Cuisine</title>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/confettiCuisine"></script>
         <link rel = "stylesheet" href="/css/confetti_cuisine.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bootstrap.css">
     </head>
     <body>
         <div id = "nav">
@@ -17,12 +20,14 @@
                 <a href="/courses">
                     <span class="button">Courses</span>
                 </a>
-                <a href="/contact">
+                <a href="/subscribers/new">
                     <span class="button">Contact</span>
                 </a>
                 <a href="/users/new">
                     <span class="button">Users</span>
                 </a>
+                <%- include('courses/_coursesModal')%>
+
             </div>
 
             <div class="login">

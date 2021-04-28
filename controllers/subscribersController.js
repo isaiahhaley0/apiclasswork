@@ -15,10 +15,10 @@ module.exports = {
             })
     },
     indexView: (req, res) => {
-        res.render("/subscribers/index");
+        res.render("subscribers/index");
     },
     new: (req, res) => {
-        res.render("/subscriberrs/new")
+        res.render("subscribers/new")
     },
     create: (req, res, next) => {
         let newSubscriber = new Subscriber({
@@ -61,7 +61,7 @@ module.exports = {
         let subscriberId = req.params.id;
         Subscriber.findById(subscriberId)
             .then(subscriber => {
-                res.render("/subscribers/edit", { subscriber: subscriber });
+                res.render("subscribers/edit", { subscriber: subscriber });
             })
             .catch(error => {
                 console.log(`Error loading subscriber by ID: ${error.message}`);
@@ -78,7 +78,7 @@ module.exports = {
         Subscriber.findByIdAndUpdate(subscriberId, updatedSubscriber)
             .then(subscriber => {
                 res.locals.Subscriber = subscriber;
-                res.local.redirect = `/subscriber/${subscriber._id}`;
+                res.local.redirect = `/subscribers/${subscriber._id}`;
                 next();
             })
             .catch(error => {
