@@ -18,7 +18,7 @@ passport = require("passport"),
 
 
 
-mongoose.connect("mongodb://localhost:27017/confetti_cuisine",{useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true, useUnifiedTopology: true })
 
 app.set("port",process.env.PORT||3000);
 mongoose.set("useCreateIndex",true);
